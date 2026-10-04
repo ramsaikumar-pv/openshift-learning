@@ -490,11 +490,12 @@
 ```
 Date        : 2026-10-03
 Completed   : Course scaffolded; `git init -b main` run hands-on (no commit yet)
-Current     : 00-foundations/03-git-refresh — paused mid-step. Ram was asked to predict
-              then run `git status --untracked-files=all | wc -l`, and to answer: would an
-              ignored file inside an untracked folder still show as the folder, and would
-              `git add .` stage it? Resume there → git check-ignore -v with a fake
-              kubeconfig → first commit → create GitHub repo → push.
+Current     : 00-foundations/03-git-refresh — Ram ran `git add .` (126 files staged, verified
+              nothing sensitive). Commit-message convention taught; draft message given.
+              Resume: Ram predicts `git log --oneline`, runs `git commit` (vi) → then test
+              ignores with a fake kubeconfig + `git check-ignore -v` → create GitHub repo → push.
+              Still-open questions: untracked-files=all count; would `git add .` stage an
+              ignored kubeconfig?
 Next up     : 00-foundations/01-yaml-basics
 Guidance    : HIGH (default unless Ram explicitly says otherwise)
 Lab         : WSL (+ GitHub)
@@ -514,7 +515,10 @@ Notes       : Ram is a beginner to containers, K8s, OpenShift and YAML — remem
 - Gap found: hadn't considered that Git summarises untracked dirs — good probing material.
 - Fixed a bug of my own in .gitignore before Ram used it: inline `# comments` after a pattern
   aren't comments in gitignore (they become part of the pattern).
-- Paused for other work. No commit/push yet — nothing to push.
+- Ram ran `git add .` before the ignore check — safe this time (all files Claude-written, verified
+  staged list), but habit noted: verify before `git add .` in this repo.
+- Taught commit-message format (imperative subject ≤50, blank line, why-body at 72). Commit pending.
+- Paused for other work. No commit/push yet.
 - First session. Read git-learning CLAUDE.md/PROGRESS.md for learning style and Git status
   (Git side track: next is revert/reset L1, then .gitignore, forking, PRs).
 - Ram set guidance default to HIGH unless stated otherwise; asked for maximum detail in material.
