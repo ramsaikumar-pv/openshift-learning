@@ -28,7 +28,7 @@
 - [ ] Network troubleshooting toolkit: `ss`, `ip`, `dig`, `curl -v`
 
 ### 03-git-refresh — Git refresh for manifests
-- [ ] Initialise this course repo and push it to GitHub (ramsaikumar-pv)
+- [x] Initialise this course repo and push it to GitHub (ramsaikumar-pv)
 - [ ] `.gitignore` for kubeconfigs, pull secrets, keys and install state
 - [ ] Verify ignores with `git status` and `git check-ignore -v`
 - [ ] Commit YAML manifests in small, meaningful commits
@@ -488,25 +488,34 @@
 ## 📅 Last Session
 
 ```
-Date        : 2026-10-03
-Completed   : Course scaffolded; `git init -b main` run hands-on (no commit yet)
-Current     : 00-foundations/03-git-refresh — Ram ran `git add .` (126 files staged, verified
-              nothing sensitive). Commit-message convention taught; draft message given.
-              Resume: Ram predicts `git log --oneline`, runs `git commit` (vi) → then test
-              ignores with a fake kubeconfig + `git check-ignore -v` → create GitHub repo → push.
-              Still-open questions: untracked-files=all count; would `git add .` stage an
-              ignored kubeconfig?
-Next up     : 00-foundations/01-yaml-basics
+Date        : 2026-10-08
+Completed   : 00/03-git-refresh — repo initialised, committed and pushed to GitHub
+              (main tracks origin/main). Ram committed + pushed PROGRESS.md himself (6b11cec).
+Current     : —
+Next up     : 00-foundations/01-yaml-basics (Ram chose this for the next session)
+Still open  : 00/03-git-refresh — test ignores with a fake kubeconfig + `git check-ignore -v`;
+              open questions: untracked-files=all count; would `git add .` stage an ignored
+              kubeconfig? Fold these into a later session (good L2 material).
 Guidance    : HIGH (default unless Ram explicitly says otherwise)
 Lab         : WSL (+ GitHub)
 Blockers    : none
-Notes       : Ram is a beginner to containers, K8s, OpenShift and YAML — remembers only
-              'what is a pod'. Wants as much detail as possible in course material.
+Notes       : Beginner to containers, K8s, OpenShift and YAML. Commit subjects still
+              descriptive rather than imperative — nudge gently when he next commits.
 ```
 
 ---
 
 ## 📓 Session Log (newest first)
+
+### 2026-10-08 — status check, wrap-up of Git setup
+- Reviewed overall status. Ram committed and pushed the PROGRESS.md update himself (6b11cec);
+  verified: main == origin/main, clean tree, no ignored files present.
+- Feedback given: subject "current progress of openshift learning" is descriptive, not
+  imperative ("If applied, this commit will…" test). bd4cf36 subject starts with `[200~`
+  (bracketed-paste artifact) — cosmetic, not worth rewriting pushed history.
+- Ticked: "Initialise this course repo and push it to GitHub". Left unticked: .gitignore
+  verification and "commit YAML manifests" (no manifests yet).
+- Ram chose to start 00/01-yaml-basics next session; the ignore test stays open.
 
 ### 2026-10-08 — repo pushed to GitHub
 - Added remote (typo `orign` → fixed with `git remote rename`), then the first push was
