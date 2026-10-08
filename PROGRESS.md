@@ -508,6 +508,13 @@ Notes       : Ram is a beginner to containers, K8s, OpenShift and YAML — remem
 
 ## 📓 Session Log (newest first)
 
+### 2026-10-08 — repo pushed to GitHub
+- Added remote (typo `orign` → fixed with `git remote rename`), then the first push was
+  rejected because the GitHub repo had its own README commit (unrelated histories).
+  Combined them with `git rebase origin/main` and pushed with `-u`. `main` now tracks
+  `origin/main`. Details and the rebase gap are logged in ~/git-learning/PROGRESS.md.
+- Still open from 03-git-refresh: test ignores with a fake kubeconfig + `git check-ignore -v`.
+
 ### 2026-10-03 — course scaffold + git init (paused)
 - Ran `git init -b main` in ~/openshift-learning himself. Predicted `git status` would list all
   126 files; actual: 16 entries (untracked folders collapsed). Explained default
