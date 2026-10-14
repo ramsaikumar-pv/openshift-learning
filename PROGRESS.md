@@ -507,12 +507,26 @@ Notes       : Beginner to containers, K8s, OpenShift and YAML. Commit subjects s
 
 ## 📓 Session Log (newest first)
 
-### 2026-10-14 — status check (cloud session)
+### 2026-10-14 — status check + bringing a remote branch into main (cloud session)
 - Ram asked for his current status. Summarised: Phase 00, 1 item done hands-on (repo pushed),
-  00/03-git-refresh partly done, 00/01-yaml-basics next. No hands-on work this session.
-- Asked the session-start recall question (how the rejected first push was fixed) — not yet answered.
-- ~/git-learning wasn't reachable from the cloud session, so the Git side track wasn't checked.
-- Nothing ticked; "Last Session" pointer unchanged (still resumes at 00/01-yaml-basics).
+  00/03-git-refresh partly done, 00/01-yaml-basics next.
+- Claude logged the session on branch `claude/affectionate-fermi-75oq02` (first push hit a 403 until
+  Ram reconnected GitHub access). Ram then brought it into main himself in WSL:
+  `git fetch` → `git branch` (only main — surprised) → `git branch -a` (saw remotes/origin/…) →
+  `git log --oneline main..origin/claude/…` (1 commit) → `git log --oneline --graph --all` →
+  `git merge` (fast-forward b5803a0..3317986) → `git push` → `git log origin/main..main` (empty ✅).
+- Git ideas covered: local vs remote-tracking branches; fetch only downloads; `A..B` ranges;
+  `--oneline`/decorations/short hashes; `--graph --all`; fast-forward vs merge commit.
+- Predictions: `origin/main..main` (unpushed commits) ✅; `main..origin/main` without fetch shows
+  nothing ✅; graph one commit ahead ✅; post-push sync ✅.
+- Gaps/corrections: said "not in main" instead of "not in origin/main" (corrected). Thought the
+  `origin/claude/…` label sat on 3317986 *because* he merged — it was there since the fetch; merge
+  moves only the current branch. Ran `git merge` before giving his prediction — nudge to predict first.
+- Note: push said `Total 0` — the commit object was already on GitHub (via the claude branch), so
+  only the `main` label moved. Good L2 question for later.
+- The session-start recall question (how the rejected first push was fixed) is still unanswered.
+- ~/git-learning wasn't reachable from the cloud session — Ram should log this Git practice there.
+- Nothing ticked in OpenShift modules; "Last Session" still resumes at 00/01-yaml-basics.
 
 ### 2026-10-08 — status check, wrap-up of Git setup
 - Reviewed overall status. Ram committed and pushed the PROGRESS.md update himself (6b11cec);

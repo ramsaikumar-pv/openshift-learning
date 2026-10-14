@@ -25,3 +25,22 @@
 - **Open question (unanswered, resume here):** an ignored kubeconfig inside an untracked
   folder — does `git status` still show only the folder? Would `git add .` stage it?
 - **Next command pending:** predict, then `git status --untracked-files=all | wc -l`.
+
+### 2026-10-14 — bringing a remote branch into main
+- **Q:** after `git fetch`, why does `git branch` still show only `main`?
+- **Actual:** fetch creates remote-tracking branches (`origin/...`), not local ones; `git branch -a`
+  shows them.
+- **Q (scenario):** you commit "Add YAML notes" on local main without pushing. What does
+  `git log --oneline origin/main..main` print?
+- **Ram:** "local commit details that's not in main." **Correction:** not in *origin/main* — it lists
+  unpushed commits.
+- **Q (scenario):** a teammate pushes to GitHub's main; you don't fetch. Does
+  `git log main..origin/main` show it?
+- **Ram:** "No — local Git has no idea what went to the remote." ✅
+- **Q:** after merging and then running `git fetch`, why is `origin/main` still on the old commit?
+- **Ram:** "fetch is remote → local, not local → remote." ✅ Then guessed the `origin/claude/...`
+  label was on the new commit *because* he merged. **Correction:** it was there since the fetch;
+  a merge only moves the current branch (HEAD).
+- **Predict → run:** graph shows the claude branch one commit ahead ✅; merge was a fast-forward ✅
+  (ran it before predicting); after push, `origin/main..main` prints nothing ✅.
+- **L2 idea for later:** why did `git push` report `Total 0` objects?
