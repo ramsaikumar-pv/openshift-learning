@@ -43,4 +43,7 @@
   a merge only moves the current branch (HEAD).
 - **Predict → run:** graph shows the claude branch one commit ahead ✅; merge was a fast-forward ✅
   (ran it before predicting); after push, `origin/main..main` prints nothing ✅.
-- **L2 idea for later:** why did `git push` report `Total 0` objects?
+- **Q:** why did `git push` report `Total 0` objects yet still move GitHub's main?
+- **Ram:** "nothing to upload because it's already on the remote" ✅; "fetch got the metadata".
+  **Correction:** fetch downloads the full objects (commit, trees, blobs), not just metadata — the
+  push only had to move the `main` pointer.

@@ -492,7 +492,7 @@ Date        : 2026-10-08
 Completed   : 00/03-git-refresh — repo initialised, committed and pushed to GitHub
               (main tracks origin/main). Ram committed + pushed PROGRESS.md himself (6b11cec).
 Current     : —
-Next up     : 00-foundations/01-yaml-basics (Ram chose this for the next session)
+Next up     : 00-foundations/01-yaml-basics — start directly (Ram's request, 2026-10-14)
 Still open  : 00/03-git-refresh — test ignores with a fake kubeconfig + `git check-ignore -v`;
               open questions: untracked-files=all count; would `git add .` stage an ignored
               kubeconfig? Fold these into a later session (good L2 material).
@@ -522,9 +522,10 @@ Notes       : Beginner to containers, K8s, OpenShift and YAML. Commit subjects s
 - Gaps/corrections: said "not in main" instead of "not in origin/main" (corrected). Thought the
   `origin/claude/…` label sat on 3317986 *because* he merged — it was there since the fetch; merge
   moves only the current branch. Ran `git merge` before giving his prediction — nudge to predict first.
-- Note: push said `Total 0` — the commit object was already on GitHub (via the claude branch), so
-  only the `main` label moved. Good L2 question for later.
-- The session-start recall question (how the rejected first push was fixed) is still unanswered.
+- `Total 0` question: Ram — "push has nothing to upload because it's already on the remote" ✅.
+  Said fetch got "metadata" — corrected: fetch downloads the real objects (commit, trees, file
+  contents/blobs) plus the branch pointer; that's why the later merge needed no network.
+- Ram asked to go straight to YAML next session (skip the 10-08 recall question).
 - ~/git-learning wasn't reachable from the cloud session — Ram should log this Git practice there.
 - Nothing ticked in OpenShift modules; "Last Session" still resumes at 00/01-yaml-basics.
 
