@@ -507,6 +507,13 @@ Notes       : Beginner to containers, K8s, OpenShift and YAML. Commit subjects s
 
 ## 📓 Session Log (newest first)
 
+### 2026-10-14 — status check (cloud session)
+- Ram asked for his current status. Summarised: Phase 00, 1 item done hands-on (repo pushed),
+  00/03-git-refresh partly done, 00/01-yaml-basics next. No hands-on work this session.
+- Asked the session-start recall question (how the rejected first push was fixed) — not yet answered.
+- ~/git-learning wasn't reachable from the cloud session, so the Git side track wasn't checked.
+- Nothing ticked; "Last Session" pointer unchanged (still resumes at 00/01-yaml-basics).
+
 ### 2026-10-08 — status check, wrap-up of Git setup
 - Reviewed overall status. Ram committed and pushed the PROGRESS.md update himself (6b11cec);
   verified: main == origin/main, clean tree, no ignored files present.
